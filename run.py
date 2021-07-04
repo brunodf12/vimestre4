@@ -9,7 +9,7 @@ from TwitchChannelPointsMiner.classes.entities.Bet import Strategy, BetSettings,
 from TwitchChannelPointsMiner.classes.entities.Streamer import Streamer, StreamerSettings
 
 twitch_miner = TwitchChannelPointsMiner(
-    username="xandyifsp4",
+    username="hugecsss1",
     password="1*ut#q!32%",           # If no password will be provided, the script will ask interactively
     claim_drops_startup=False,                  # If you want to auto claim all drops from Twitch inventory on the startup
     priority=[                                  # Custom priority in this case for example:
@@ -61,8 +61,13 @@ twitch_miner = TwitchChannelPointsMiner(
 
 twitch_miner.mine(
     [
+         
          Streamer("johnpittertv", settings=StreamerSettings(make_predictions=False  , follow_raid=False, claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
-       
+         Streamer("doutora", settings=StreamerSettings(make_predictions=False  , follow_raid=False, claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
+         Streamer("rooh1v9", settings=StreamerSettings(make_predictions=False  , follow_raid=False, claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
+         Streamer("ninfeta_cyclonada", settings=StreamerSettings(make_predictions=False  , follow_raid=False, claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
+         Streamer("g_itzyy", settings=StreamerSettings(make_predictions=False  , follow_raid=False, claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
+      
     ],                                 # Array of streamers (order = priority)
     followers=False                   # Automatic download the list of your followers (unable to set custom settings for you followers list)
 )
